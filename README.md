@@ -6,6 +6,8 @@ It also includes basic editing features like cropping and resizing images.
 <p><a href="https://apps.microsoft.com/detail/9n497rjhvx9z?referrer=appbadge&mode=direct"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/></a></p>
 
 ## Key Features
+
+<img width="193" height="222" alt="main_en" src="https://github.com/user-attachments/assets/aa206436-dbc2-4bb0-a9cf-0c5c06e0bd5f" /><br/>
 * Supports various texture formats such as PVR and ASTC.
 * Supports HDR formats such as AVIF and UltraHDR.
 * It can display colors correctly using color space information from textures or profiles like CICP and ICC.
@@ -18,10 +20,12 @@ It also includes basic editing features like cropping and resizing images.
 
 ## How to use
 
-→ How to use TexViewer
+→ [How to use TexViewer](https://github.com/ueda-san/TexViewer/wiki/How-to-use-%E2%80%90-en)
 
 ## Supported file extensions
 
+|Extension |Description|
+| --- | --- |
 |astc      |Adaptive Scalable Texture Compression          |
 |avif      |AV1 Image File Format                          |
 |basis     |Basis Universal GPU texture                    |

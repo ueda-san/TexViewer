@@ -9,8 +9,7 @@
 
 ## 主な特徴
 
-<img width="193" alt="TexViewer" src="https://github.com/user-attachments/assets/981b1f63-e7a8-402b-9d3e-f5788cff466f" /><br/>
-
+<img width="193" height="222" alt="main_ja" src="https://github.com/user-attachments/assets/981b1f63-e7a8-402b-9d3e-f5788cff466f" /><br/>
 * PVR や ASTC など各種テクスチャ形式に対応しています。
 * AVIF や UltraHDR など HDR 形式に対応しています。
 * テクスチャの色域情報または CICP や ICC などから正しい色で表示できます。
@@ -24,10 +23,12 @@
 
 ## 使い方
 
-→ TexViewer の使い方
+→ [TexViewer の使い方](https://github.com/ueda-san/TexViewer/wiki/How-to-use-%E2%80%90-ja)
 
 ## 対応している拡張子
 
+|Extension |Description|
+| --- | --- |
 |astc      |Adaptive Scalable Texture Compression          |
 |avif      |AV1 Image File Format                          |
 |basis     |Basis Universal GPU texture                    |
