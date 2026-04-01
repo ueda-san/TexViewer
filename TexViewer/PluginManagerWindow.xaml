@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="TexViewer.PluginManagerWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TexViewer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="TexViewer > Plugin Manager">
+    <Grid ActualThemeChanged="Grid_ActualThemeChanged">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="0"
+                  VerticalAlignment="Stretch"
+                  x:Name="PluginList"
+                  ItemsSource="{x:Bind PluginSource}"
+                  CanDragItems="True" CanReorderItems="True"
+                  AllowDrop="True" SelectionMode="None"
+                  DragItemsCompleted="PluginList_DragItemsCompleted">
+
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Plugin">
+                    <!-- Margin is: L,T,R,B -->
+                    <RelativePanel Width="500" Height="80"
+                                   Margin="1,1,1,1"
+                                   Padding="4,1,1,2"
+                                   CornerRadius="{StaticResource ControlCornerRadius}"
+                                   BorderBrush="LightGray" BorderThickness="2">
+                        <TextBlock Text="{x:Bind PluginName}" x:Name="Name"
+                                   Style="{StaticResource BaseTextBlockStyle}"/>
+                        <TextBlock Text="{x:Bind PluginVersion}" x:Name="Version"
+                                   RelativePanel.LeftOf="Toggle"
+                                   Margin="0,2,20,0"
+                                   Style="{StaticResource BodyTextBlockStyle}"/>
+                        <TextBlock Text="{x:Bind PluginDescription}" x:Name="Description"
+                                   RelativePanel.Below="Name"
+                                   Style="{StaticResource CaptionTextBlockStyle}"/>
+                        <ToggleSwitch IsOn="{x:Bind Enabled}" x:Name="Toggle"
+                                      MinWidth="80"
+                                      Toggled="ToggleSwitch_Toggled"
+                                      RelativePanel.AlignRightWithPanel="True"/>
+                        <TextBlock Text="{x:Bind Extensions}"
+                                   TextWrapping="Wrap"
+                                   Foreground="CornflowerBlue"
+                                   RelativePanel.AlignBottomWithPanel="True"/>
+                    </RelativePanel>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <RelativePanel x:Name="PluginManagerHint"
+                       Grid.Row="1"
+                       Padding="2,10,2,2">
+            <TextBlock x:Uid="PluginReorder" />
+            <Button x:Uid="PluginManagerSave"
+                    Click="PluginManagerOK_Click"
+                    Style="{StaticResource AccentButtonStyle}"
+                    RelativePanel.AlignRightWithPanel="True"/>
+        </RelativePanel>
+    </Grid>
+</Window>

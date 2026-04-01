@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap rescap">
+
+  <Identity
+    Name="HideoUeda.TexViewer"
+    Publisher="CN=2A6FEBE9-CBA9-47BB-BFD0-5D5977116D4E"
+    Version="1.1.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="cffa0982-7652-4207-8943-77bffeb36509" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>TexViewer</DisplayName>
+    <PublisherDisplayName>Hideo Ueda</PublisherDisplayName>
+    <Logo>Assets\AppIcons\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="en-US"/>
+    <Resource Language="ja-JP"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="TexViewer"
+        Description="TexViewer"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\AppIcons\MedTile.png"
+        Square44x44Logo="Assets\AppIcons\AppList.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\AppIcons\WideTile.png"  Square71x71Logo="Assets\AppIcons\SmallTile.png" Square310x310Logo="Assets\AppIcons\LargeTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Assets\AppIcons\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_ai">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="application/illustrator">.ai</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Adobe Illustrator file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\ai.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_avif">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/avif">.avif</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>AV1 Image File Format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\avif.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_bmp">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/bmp">.bmp</uap:FileType>
+              <uap:FileType ContentType="image/bmp">.dib</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Microsoft Windows bitmap file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\bmp.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_dds">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/vnd.ms-dds">.dds</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>DirectDraw Surface file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\dds.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_gif">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/gif">.gif</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>CompuServe Graphics Interchange Format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\gif.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_hdp">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/vnd.ms-photo">.hdp</uap:FileType>
+              <uap:FileType ContentType="image/vnd.ms-photo">.wdp</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Windows Media Photo file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\hdp.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_hdr">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/vnd.radiance">.hdr</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Radiance RGBE image format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\hdr.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_jp2">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/jp2">.jp2</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>JPEG-2000 JP2 File Format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\jp2.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_jpeg">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/jpeg">.jpeg</uap:FileType>
+              <uap:FileType ContentType="image/jpeg">.jpg</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Joint Photographic Experts Group JFIF format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\jpeg.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_jxr">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/vnd.ms-photo">.jxr</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Joint Photographic Experts Group Extended Range file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\jxr.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_ktx">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/ktx">.ktx</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Khronos Texture file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\ktx.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_ktx2">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/ktx2">.ktx2</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Khronos Texture 2.0 file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\ktx2.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_pdf">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="application/pdf">.pdf</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Portable Document Format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\pdf.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_png">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/png">.png</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Portable Network Graphics file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\png.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_psd">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/vnd.adobe.photoshop">.psd</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Adobe Photoshop multispectral bitmap file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\psd.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_svg">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/svg+xml">.svg</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Scalable Vector Graphics file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\svg.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_tiff">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/tiff">.tiff</uap:FileType>
+              <uap:FileType ContentType="image/tiff">.tif</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Tagged Image File Format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\tiff.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_webp">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/webp">.webp</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Weppy image format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\webp.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_apng">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/apng">.apng</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Animated Portable Network Graphics file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\apng.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_astc">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/astc">.astc</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Adaptive Scalable Texture Compression file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\astc.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_basis">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/basis">.basis</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Basis Universal GPU texture file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\basis.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_dng">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/dng">.dng</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Digital Negative file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\dng.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_exr">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/exr">.exr</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>OpenEXR image file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\exr.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_heif">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/heif">.hif</uap:FileType>
+              <uap:FileType ContentType="image/heif">.heif</uap:FileType>
+              <uap:FileType ContentType="image/heic">.heic</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Apple High Efficiency Image Format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\heif.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_ico">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/vnd.microsoft.icon">.ico</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Microsoft icon file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\ico.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_miff">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/miff">.miff</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Magick Image File Format file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\miff.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_mng">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="video/x-mng">.mng</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Multiple-image Network Graphics</uap:DisplayName>
+            <uap:Logo>Assets\Icons\mng.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_pkm">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/pkm">.pkm</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Ericsson Texture Compression file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\pkm.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_pvr">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="application/x-pvr">.pvr</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>PowerVR Texture Compression file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\pvr.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_tga">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/x-tga">.tga</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Truevision graphics adapter file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\tga.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_xcf">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/x-xcf">.xcf</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>GIMP image file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\xcf.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="texviewer_any">
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="image/art">.art</uap:FileType>
+              <uap:FileType ContentType="image/fax">.fax</uap:FileType>
+              <uap:FileType ContentType="image/pbm">.pbm</uap:FileType>
+              <uap:FileType ContentType="image/pcx">.pcx</uap:FileType>
+              <uap:FileType ContentType="image/pgm">.pgm</uap:FileType>
+              <uap:FileType ContentType="image/ppm">.ppm</uap:FileType>
+              <uap:FileType ContentType="image/sgi">.sgi</uap:FileType>
+              <uap:FileType ContentType="image/sun">.sun</uap:FileType>
+              <uap:FileType ContentType="image/xbm">.xbm</uap:FileType>
+              <uap:FileType ContentType="image/xpm">.xpm</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Image file</uap:DisplayName>
+            <uap:Logo>Assets\Icons\img.png</uap:Logo>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

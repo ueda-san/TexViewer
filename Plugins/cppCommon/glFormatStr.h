@@ -1,0 +1,223 @@
+﻿#pragma once
+
+#include <string>
+#include <format>
+
+std::string glFormatStr(uint32_t fmt){
+    switch(fmt){
+      case 0x1400: return "BYTE";
+      case 0x1401: return "UNSIGNED_BYTE";
+      case 0x1402: return "SHORT";
+      case 0x1403: return "UNSIGNED_SHORT";
+      case 0x1404: return "INT";
+      case 0x1405: return "UNSIGNED_INT";
+      case 0x1406: return "FLOAT";
+      case 0x140B: return "HALF_FLOAT";
+      case 0x1903: return "RED";
+      case 0x1904: return "GREEN";
+      case 0x1905: return "BLUE";
+      case 0x1906: return "ALPHA";
+      case 0x1907: return "RGB";
+      case 0x1908: return "RGBA";
+      case 0x1909: return "LUMINANCE";
+      case 0x190A: return "LUMINANCE_ALPHA";
+      case 0x2A10: return "R3_G3_B2";
+      case 0x804F: return "RGB4";
+      case 0x8050: return "RGB5";
+      case 0x8051: return "RGB8";
+      case 0x8052: return "RGB10";
+      case 0x8053: return "RGB12";
+      case 0x8054: return "RGB16";
+      case 0x8055: return "RGBA2";
+      case 0x8056: return "RGBA4";
+      case 0x8057: return "RGB5_A1";
+      case 0x8058: return "RGBA8";
+      case 0x8059: return "RGB10_A2";
+      case 0x805A: return "RGBA12";
+      case 0x805B: return "RGBA16";
+      case 0x80E0: return "BGR";
+      case 0x80E1: return "BGRA";
+      case 0x8227: return "RG";
+      case 0x8228: return "RG_INTEGER";
+      case 0x8229: return "R8";
+      case 0x822A: return "R16";
+      case 0x822B: return "RG8";
+      case 0x822C: return "RG16";
+      case 0x822D: return "R16F";
+      case 0x822E: return "R32F";
+      case 0x822F: return "RG16F";
+      case 0x8230: return "RG32F";
+      case 0x8231: return "R8I";
+      case 0x8232: return "R8UI";
+      case 0x8233: return "R16I";
+      case 0x8234: return "R16UI";
+      case 0x8235: return "R32I";
+      case 0x8236: return "R32UI";
+      case 0x8237: return "RG8I";
+      case 0x8238: return "RG8UI";
+      case 0x8239: return "RG16I";
+      case 0x823A: return "RG16UI";
+      case 0x823B: return "RG32I";
+      case 0x823C: return "RG32UI";
+      case 0x8362: return "UNSIGNED_BYTE_2_3_3_REV";
+      case 0x8363: return "UNSIGNED_SHORT_5_6_5";
+      case 0x8364: return "UNSIGNED_SHORT_5_6_5_REV";
+      case 0x8365: return "UNSIGNED_SHORT_4_4_4_4_REV";
+      case 0x8366: return "UNSIGNED_SHORT_1_5_5_5_REV";
+      case 0x8367: return "UNSIGNED_INT_8_8_8_8_REV";
+      case 0x8368: return "UNSIGNED_INT_2_10_10_10_REV";
+      case 0x881A: return "RGBA16F_EXT";
+      case 0x881B: return "RGB16F_EXT";
+      case 0x8B90: return "PALETTE4_RGB8_OES";
+      case 0x8B91: return "PALETTE4_RGBA8_OES";
+      case 0x8B92: return "PALETTE4_R5_G6_B5_OES";
+      case 0x8B93: return "PALETTE4_RGBA4_OES";
+      case 0x8B94: return "PALETTE4_RGB5_A1_OES";
+      case 0x8B95: return "PALETTE8_RGB8_OES";
+      case 0x8B96: return "PALETTE8_RGBA8_OES";
+      case 0x8B97: return "PALETTE8_R5_G6_B5_OES";
+      case 0x8B98: return "PALETTE8_RGBA4_OES";
+      case 0x8B99: return "PALETTE8_RGB5_A1_OES";
+      case 0x8C40: return "SRGB";
+      case 0x8C41: return "SRGB8";
+      case 0x8C42: return "SRGB_ALPHA";
+      case 0x8C43: return "SRGB8_ALPHA8";
+      case 0x8C48: return "COMPRESSED_SRGB";
+      case 0x8C49: return "COMPRESSED_SRGB_ALPHA";
+      case 0x8D64: return "ETC1_RGB8_OES";
+      case 0x8DBB: return "COMPRESSED_RED_RGTC1";
+      case 0x8DBC: return "COMPRESSED_SIGNED_RED_RGTC1";
+      case 0x8DBD: return "COMPRESSED_RG_RGTC2";
+      case 0x8DBE: return "COMPRESSED_SIGNED_RG_RGTC2";
+      case 0x9270: return "COMPRESSED_R11_EAC";
+      case 0x9271: return "COMPRESSED_SIGNED_R11_EAC";
+      case 0x9272: return "COMPRESSED_RG11_EAC";
+      case 0x9273: return "COMPRESSED_SIGNED_RG11_EAC";
+      case 0x9274: return "COMPRESSED_RGB8_ETC2";
+      case 0x9275: return "COMPRESSED_SRGB8_ETC2";
+      case 0x9276: return "COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2";
+      case 0x9277: return "COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2";
+      case 0x9278: return "COMPRESSED_RGBA8_ETC2_EAC";
+      case 0x9279: return "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC";
+      case 0x93B0: return "COMPRESSED_RGBA_ASTC_4x4_KHR";
+      case 0x93B1: return "COMPRESSED_RGBA_ASTC_5x4_KHR";
+      case 0x93B2: return "COMPRESSED_RGBA_ASTC_5x5_KHR";
+      case 0x93B3: return "COMPRESSED_RGBA_ASTC_6x5_KHR";
+      case 0x93B4: return "COMPRESSED_RGBA_ASTC_6x6_KHR";
+      case 0x93B5: return "COMPRESSED_RGBA_ASTC_8x5_KHR";
+      case 0x93B6: return "COMPRESSED_RGBA_ASTC_8x6_KHR";
+      case 0x93B7: return "COMPRESSED_RGBA_ASTC_8x8_KHR";
+      case 0x93B8: return "COMPRESSED_RGBA_ASTC_10x5_KHR";
+      case 0x93B9: return "COMPRESSED_RGBA_ASTC_10x6_KHR";
+      case 0x93BA: return "COMPRESSED_RGBA_ASTC_10x8_KHR";
+      case 0x93BB: return "COMPRESSED_RGBA_ASTC_10x10_KHR";
+      case 0x93BC: return "COMPRESSED_RGBA_ASTC_12x10_KHR";
+      case 0x93BD: return "COMPRESSED_RGBA_ASTC_12x12_KHR";
+      case 0x93C0: return "COMPRESSED_RGBA_ASTC_3x3x3_OES";
+      case 0x93C1: return "COMPRESSED_RGBA_ASTC_4x3x3_OES";
+      case 0x93C2: return "COMPRESSED_RGBA_ASTC_4x4x3_OES";
+      case 0x93C3: return "COMPRESSED_RGBA_ASTC_4x4x4_OES";
+      case 0x93C4: return "COMPRESSED_RGBA_ASTC_5x4x4_OES";
+      case 0x93C5: return "COMPRESSED_RGBA_ASTC_5x5x4_OES";
+      case 0x93C6: return "COMPRESSED_RGBA_ASTC_5x5x5_OES";
+      case 0x93C7: return "COMPRESSED_RGBA_ASTC_6x5x5_OES";
+      case 0x93C8: return "COMPRESSED_RGBA_ASTC_6x6x5_OES";
+      case 0x93C9: return "COMPRESSED_RGBA_ASTC_6x6x6_OES";
+      case 0x93D0: return "COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR";
+      case 0x93D1: return "COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR";
+      case 0x93D2: return "COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR";
+      case 0x93D3: return "COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR";
+      case 0x93D4: return "COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR";
+      case 0x93D5: return "COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR";
+      case 0x93D6: return "COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR";
+      case 0x93D7: return "COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR";
+      case 0x93D8: return "COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR";
+      case 0x93D9: return "COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR";
+      case 0x93DA: return "COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR";
+      case 0x93DB: return "COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR";
+      case 0x93DC: return "COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR";
+      case 0x93DD: return "COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR";
+      case 0x93E0: return "COMPRESSED_SRGB8_ALPHA8_ASTC_3x3x3_OES";
+      case 0x93E1: return "COMPRESSED_SRGB8_ALPHA8_ASTC_4x3x3_OES";
+      case 0x93E2: return "COMPRESSED_SRGB8_ALPHA8_ASTC_4x4x3_OES";
+      case 0x93E3: return "COMPRESSED_SRGB8_ALPHA8_ASTC_4x4x4_OES";
+      case 0x93E4: return "COMPRESSED_SRGB8_ALPHA8_ASTC_5x4x4_OES";
+      case 0x93E5: return "COMPRESSED_SRGB8_ALPHA8_ASTC_5x5x4_OES";
+      case 0x93E6: return "COMPRESSED_SRGB8_ALPHA8_ASTC_5x5x5_OES";
+      case 0x93E7: return "COMPRESSED_SRGB8_ALPHA8_ASTC_6x5x5_OES";
+      case 0x93E8: return "COMPRESSED_SRGB8_ALPHA8_ASTC_6x6x5_OES";
+      case 0x93E9: return "COMPRESSED_SRGB8_ALPHA8_ASTC_6x6x6_OES";
+    }
+    return std::format("unknown 0x{:04x}",fmt);
+}
+
+bool isSRGB(uint32_t fmt){
+    switch(fmt){
+      case 0x8C40: // "SRGB";
+      case 0x8C41: // "SRGB8";
+      case 0x8C42: // "SRGB_ALPHA";
+      case 0x8C43: // "SRGB8_ALPHA8";
+      case 0x8C48: // "COMPRESSED_SRGB";
+      case 0x8C49: // "COMPRESSED_SRGB_ALPHA";
+      case 0x9275: // "COMPRESSED_SRGB8_ETC2";
+      case 0x9277: // "COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2";
+      case 0x9279: // "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC";
+      case 0x93D0: // "COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR";
+      case 0x93D1: // "COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR";
+      case 0x93D2: // "COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR";
+      case 0x93D3: // "COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR";
+      case 0x93D4: // "COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR";
+      case 0x93D5: // "COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR";
+      case 0x93D6: // "COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR";
+      case 0x93D7: // "COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR";
+      case 0x93D8: // "COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR";
+      case 0x93D9: // "COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR";
+      case 0x93DA: // "COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR";
+      case 0x93DB: // "COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR";
+      case 0x93DC: // "COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR";
+      case 0x93DD: // "COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR";
+      case 0x93E0: // "COMPRESSED_SRGB8_ALPHA8_ASTC_3x3x3_OES";
+      case 0x93E1: // "COMPRESSED_SRGB8_ALPHA8_ASTC_4x3x3_OES";
+      case 0x93E2: // "COMPRESSED_SRGB8_ALPHA8_ASTC_4x4x3_OES";
+      case 0x93E3: // "COMPRESSED_SRGB8_ALPHA8_ASTC_4x4x4_OES";
+      case 0x93E4: // "COMPRESSED_SRGB8_ALPHA8_ASTC_5x4x4_OES";
+      case 0x93E5: // "COMPRESSED_SRGB8_ALPHA8_ASTC_5x5x4_OES";
+      case 0x93E6: // "COMPRESSED_SRGB8_ALPHA8_ASTC_5x5x5_OES";
+      case 0x93E7: // "COMPRESSED_SRGB8_ALPHA8_ASTC_6x5x5_OES";
+      case 0x93E8: // "COMPRESSED_SRGB8_ALPHA8_ASTC_6x6x5_OES";
+      case 0x93E9: // "COMPRESSED_SRGB8_ALPHA8_ASTC_6x6x6_OES";
+        return true;
+      default:
+        break;
+    }
+    return false;
+}
+
+std::string glTypeStr(uint32_t type){
+    switch(type){
+      case 0x1400: return "GL_BYTE";
+      case 0x1401: return "GL_UNSIGNED_BYTE";
+      case 0x1402: return "GL_SHORT";
+      case 0x1403: return "GL_UNSIGNED_SHORT";
+      case 0x1404: return "GL_INT";
+      case 0x1405: return "GL_UNSIGNED_INT";
+      case 0x140C: return "GL_FIXED";
+      case 0x140B: return "GL_HALF_FLOAT";
+      case 0x1406: return "GL_FLOAT";
+      case 0x140a: return "GL_DOUBLE";
+
+      case 0x8032: return "GL_UNSIGNED_BYTE_3_3_2";
+      case 0x8362: return "GL_UNSIGNED_BYTE_2_3_3_REV";
+      case 0x8363: return "GL_UNSIGNED_SHORT_5_6_5";
+      case 0x8364: return "GL_UNSIGNED_SHORT_5_6_5_REV";
+      case 0x8033: return "GL_UNSIGNED_SHORT_4_4_4_4";
+      case 0x8365: return "GL_UNSIGNED_SHORT_4_4_4_4_REV";
+      case 0x8034: return "GL_UNSIGNED_SHORT_5_5_5_1";
+      case 0x8366: return "GL_UNSIGNED_SHORT_1_5_5_5_REV";
+      case 0x8035: return "GL_UNSIGNED_INT_8_8_8_8";
+      case 0x8367: return "GL_UNSIGNED_INT_8_8_8_8_REV";
+      case 0x8036: return "GL_UNSIGNED_INT_10_10_10_2";
+      case 0x8368: return "GL_UNSIGNED_INT_2_10_10_10_REV";
+    }
+    return std::format("0x{:04x}",type);
+}

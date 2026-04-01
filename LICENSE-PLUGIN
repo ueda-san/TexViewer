@@ -1,0 +1,57 @@
+The following plugins are included in this project.
+They are licensed under their respective licenses.
+Full license texts can be found in Plugin/*/license/.
+
+--------------------------------------------------------------------------------
+ASTC Loader (astc-encoder)
+Apache-2.0 license
+https://github.com/ARM-software/astc-encoder
+
+--------------------------------------------------------------------------------
+AVIF Loader (libavif)
+BSD-2-Clause license + etc
+https://github.com/AOMediaCodec/libavif
+
+--------------------------------------------------------------------------------
+Basis Loader (basis_universal)
+Apache-2.0 + BSD-3-clause License
+https://github.com/BinomialLLC/basis_universal
+
+--------------------------------------------------------------------------------
+Compressonator DDS Loader (compressonator)
+MIT license + etc.
+https://gpuopen.com/compressonator/
+
+--------------------------------------------------------------------------------
+DirectX Tex Loader (DirectXTex)
+MIT license
+https://github.com/microsoft/DirectXTex
+
+--------------------------------------------------------------------------------
+ETCPACK Loader (ETCPACK)
+see Plugins/ETCPACKLoaderLib/license/licence.txt
+https://github.com/Ericsson/ETCPACK
+
+--------------------------------------------------------------------------------
+Magick Loader (Magick.NET)
+Apache-2.0 license
+https://github.com/dlemstra/Magick.NET
+
+--------------------------------------------------------------------------------
+PNG Loader (libpng)
+PNG Reference Library License
+https://github.com/pnggroup/libpng
+
+--------------------------------------------------------------------------------
+PVR Loader (PVRTexTool)
+“This product includes components of the PowerVR Software Tools from Imagination Technologies Limited”
+https://developer.imaginationtech.com/solutions/pvrtextool/
+
+--------------------------------------------------------------------------------
+UltraHDR Loader (libultrahdr)
+Apache-2.0 license
+https://github.com/google/libultrahdr
+
+--------------------------------------------------------------------------------
+WIC Loader
+(Windows Imaging Component is part of the Windows OS)

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ContextColor.Text" xml:space="preserve">
+    <value>Color outside Image</value>
+  </data>
+  <data name="ContextTransparent.Text" xml:space="preserve">
+    <value>Do not display checkerboard</value>
+  </data>
+  <data name="ContextResize.Text" xml:space="preserve">
+    <value>Resize image</value>
+  </data>
+  <data name="ContextRotate.Text" xml:space="preserve">
+    <value>Rotate image</value>
+  </data>
+  <data name="ContextFlip.Text" xml:space="preserve">
+    <value>Flip image</value>
+  </data>
+  <data name="ContextInfo.Text" xml:space="preserve">
+    <value>Image info</value>
+  </data>
+  <data name="ContextAnimation.Text" xml:space="preserve">
+    <value>Animation</value>
+  </data>
+  <data name="ContextCrop.Text" xml:space="preserve">
+    <value>Crop selection area</value>
+  </data>
+  <data name="ContextMosaic.Text" xml:space="preserve">
+    <value>Mosaic selection area</value>
+  </data>
+  <data name="ContextUndo.Text" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="ContextOpen.Text" xml:space="preserve">
+    <value>Open file</value>
+  </data>
+  <data name="ContextSave.Text" xml:space="preserve">
+    <value>Save as</value>
+  </data>
+  <data name="AppBarPluginManager.Label" xml:space="preserve">
+    <value>Plugin manager</value>
+  </data>
+  <data name="AppBarHelp.Label" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Horizontal.Text" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="Vertical.Text" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="PluginReorder.Text" xml:space="preserve">
+    <value>💡Drag&amp;Drop to reorder.</value>
+  </data>
+  <data name="ResizeBYPercentage.Content" xml:space="preserve">
+    <value>Resize by percentage</value>
+  </data>
+  <data name="ResizeBYDimensions.Content" xml:space="preserve">
+    <value>Resize by dimensions</value>
+  </data>
+  <data name="ResizeFilter.Text" xml:space="preserve">
+    <value>Use Filter</value>
+  </data>
+  <data name="ResizeWidth.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="ResizeHeight.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="ResizeKeepAspect.Content" xml:space="preserve">
+    <value>Keep aspect ratio</value>
+  </data>
+  <data name="ResizeAuto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="DialogCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DialogOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DialogResize" xml:space="preserve">
+    <value>Resize</value>
+  </data>
+  <data name="TitleColorPicker" xml:space="preserve">
+    <value>Color outside the image</value>
+  </data>
+  <data name="TitleResize" xml:space="preserve">
+    <value>Resize image</value>
+  </data>
+  <data name="AppBarPreference.Label" xml:space="preserve">
+    <value>Preference</value>
+  </data>
+  <data name="PreferenceTutorial.Content" xml:space="preserve">
+    <value>Show tutorial screen on startup.</value>
+  </data>
+  <data name="PreferenceLargeImage.Content" xml:space="preserve">
+    <value>Large images are displayed in a reduced size.</value>
+  </data>
+  <data name="PreferenceFlipTexture.Text" xml:space="preserve">
+    <value>Texture flipped vertically on load.</value>
+  </data>
+  <data name="TitlePreference" xml:space="preserve">
+    <value>Preference</value>
+  </data>
+  <data name="TitleImageInfo" xml:space="preserve">
+    <value>Image info</value>
+  </data>
+  <data name="ContextAnimationPause.Text" xml:space="preserve">
+    <value>Animation (⇦ ⇨)</value>
+  </data>
+  <data name="PreferenceMosaicSize.Text" xml:space="preserve">
+    <value>Size of Mosaic</value>
+  </data>
+  <data name="AppBarFitToWindow.Content" xml:space="preserve">
+    <value>Fit image to window</value>
+  </data>
+  <data name="DialogCopyToClipboard" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
+  <data name="PreferenceTonemap.Text" xml:space="preserve">
+    <value>Tone map type</value>
+  </data>
+  <data name="PreferenceHDR.Text" xml:space="preserve">
+    <value>HDR settings</value>
+  </data>
+  <data name="PreferenceExposure.Text" xml:space="preserve">
+    <value>Exposure compensation</value>
+  </data>
+  <data name="PreferenceTonemapDisable" xml:space="preserve">
+    <value>Disable tonemap</value>
+  </data>
+  <data name="PreferenceMaxLuminanceAuto" xml:space="preserve">
+    <value>Auto detect</value>
+  </data>
+  <data name="PreferenceAlphaMode.Text" xml:space="preserve">
+    <value>Handle alpha values</value>
+  </data>
+  <data name="PreferenceAlphaModeIgnore" xml:space="preserve">
+    <value>Ignore</value>
+  </data>
+  <data name="PreferenceAlphaModeLinear" xml:space="preserve">
+    <value>Linear space (correct way)</value>
+  </data>
+  <data name="PreferenceAlphaModeGamma" xml:space="preserve">
+    <value>Gamma space (popular way)</value>
+  </data>
+  <data name="PreferenceNearestNeighbor.Content" xml:space="preserve">
+    <value>Preserve pixel edges when zooming</value>
+  </data>
+  <data name="PreferenceShowAllExif.Content" xml:space="preserve">
+    <value>Display all Exif information</value>
+  </data>
+  <data name="InfoBarMessage_NextOpen" xml:space="preserve">
+    <value>The changed settings will take effect the next time you open an image.</value>
+  </data>
+  <data name="PreferenceMaxLuminance.Text" xml:space="preserve">
+    <value>Display max Luminance</value>
+  </data>
+  <data name="PluginManagerSave.Content" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="NoPluginToRead" xml:space="preserve">
+    <value>No suitable plugin found to read</value>
+  </data>
+  <data name="NoPluginToWrite" xml:space="preserve">
+    <value>No suitable plugin found to write</value>
+  </data>
+  <data name="ErrorSave" xml:space="preserve">
+    <value>Could not save</value>
+  </data>
+  <data name="InfoBarMessage_Admin" xml:space="preserve">
+    <value>Can't open files via drag and drop when running as administrator. Use the Open file menu instead.</value>
+  </data>
+  <data name="InfoBarMessage_ChangeHDR" xml:space="preserve">
+    <value>The HDR state has been changed. For certain file formats such as UltraHDR, reloading the file may yield better results.</value>
+  </data>
+</root>

@@ -1,2 +1,47 @@
 # TexViewer
-TextureViewer for Textures and HDR Images
+This is an image viewer that excels at handling textures and HDR images.
+It also includes basic editing features like cropping and resizing images.
+<p align="right">→<a href="README_ja.md">日本語</a></p>
+
+<p><a href="https://apps.microsoft.com/detail/9n497rjhvx9z?referrer=appbadge&mode=direct"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/></a></p>
+
+## Key Features
+* Supports various texture formats such as PVR and ASTC.
+* Supports HDR formats such as AVIF and UltraHDR.
+* It can display colors correctly using color space information from textures or profiles like CICP and ICC.
+* It can also read over 100 image formats supported by ImageMagick.
+* It supports alpha-channel images, displaying transparent areas as a checkerboard pattern.
+* It enables blur-free zooming and pixel-perfect area selection.
+* Animated images like GIF, PNG, and HEIF can be displayed with animation.
+* RGB(A) arrays without headers can also be read.
+* It is not suitable for viewing HDR images on an SDR monitor.
+
+## How to use
+
+→ How to use TexViewer
+
+## Supported file extensions
+
+|astc      |Adaptive Scalable Texture Compression          |
+|avif      |AV1 Image File Format                          |
+|basis     |Basis Universal GPU texture                    |
+|dds       |Direct Draw Surface                            |
+|dng       |Digital Negative                               |
+|exr       |OpenEXR image                                  |
+|gif       |CompuServe Graphics Interchange Format         |
+|hdp(wdp)  |Windows Media Photo                            |
+|hdr       |Radiance RGBE image format                     |
+|heif(heic)|Apple High Efficiency Image Format             |
+|ico       |Microsoft icon                                 |
+|jpeg      |Joint Photographic Experts Group JFIF format   |
+|jxr       |Joint Photographic Experts Group Extended Range|
+|ktx(ktx2) |Khronos Texture                                |
+|pkm       |Ericsson texture compression                   |
+|png       |Portable Network Graphics                      |
+|psd       |Adobe Photoshop multispectral bitmap           |
+|pvr       |PowerVR texture compression                    |
+|tga       |Truevision Graphics Adapter                    |
+|tiff      |Tagged Image File Format                       |
+|webp      |Weppy image format                             |
+
+Additionally, ImageMagick supports over 100 image formats.

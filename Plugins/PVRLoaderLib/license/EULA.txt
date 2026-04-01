@@ -1,0 +1,5 @@
+see -> PowerVR Tools End User Licence Agreement
+https://developer.imaginationtech.com/terms/software-end-user-licence-agreement/
+
+
+“This product includes components of the PowerVR Software Tools from Imagination Technologies Limited”

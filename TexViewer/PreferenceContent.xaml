@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TexViewer.PreferenceContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TexViewer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <local:FloatValueConverter x:Key="FloatValueConverter"/>
+    </Page.Resources>
+
+    <StackPanel Padding="8" Width="370">
+        <StackPanel>
+            <CheckBox x:Name="Tutorial"
+                      x:Uid="PreferenceTutorial"
+                      IsChecked="True"/>
+        </StackPanel>
+        <StackPanel>
+            <CheckBox x:Name="LargeImage"
+                      x:Uid="PreferenceLargeImage"
+                      IsChecked="True"/>
+        </StackPanel>
+        <StackPanel>
+            <CheckBox x:Name="NearestNeighbor"
+                      x:Uid="PreferenceNearestNeighbor"
+                      Checked="NearestNeighbor_Checked"
+                      Unchecked="NearestNeighbor_Unchecked"
+                      IsChecked="True"/>
+        </StackPanel>
+        <StackPanel>
+            <CheckBox x:Name="ShowAllExif"
+                      x:Uid="PreferenceShowAllExif"
+                      IsChecked="False"/>
+        </StackPanel>
+        <Border BorderBrush="{StaticResource MyBackgroundDisabled}"
+                BorderThickness="0,1,0,0" Width="Auto" Height="1"/>
+        <StackPanel>
+            <TextBlock x:Uid="PreferenceMosaicSize"
+                       Style="{StaticResource BaseTextBlockStyle}"/>
+            <Slider x:Name="MosaicSize"
+                    AutomationProperties.Name="Slider with ticks"
+                    Minimum="4"
+                    Maximum="50"
+                    Value="20"
+                    TickFrequency="10"
+                    TickPlacement="Outside"
+                    SnapsTo="StepValues" />
+        </StackPanel>
+        <Border BorderBrush="{StaticResource MyBackgroundDisabled}"
+                BorderThickness="0,1,0,0" Width="Auto" Height="1"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"
+                       x:Uid="PreferenceAlphaMode" VerticalAlignment="Center"/>
+            <ComboBox Grid.Column="1"
+                      x:Name="AlphaMode"
+                      SelectionChanged="AlphaMode_SelectionChanged"
+                      HorizontalAlignment="Stretch"/>
+        </Grid>
+
+        <StackPanel>
+            <TextBlock x:Uid="PreferenceFlipTexture"
+                       Style="{StaticResource BaseTextBlockStyle}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <CheckBox x:Name="FlipAstc" Margin="10,0,0,0" IsChecked="False"
+                          Content=".astc" Grid.Row="0" Grid.Column="0" />
+                <CheckBox x:Name="FlipBasis" Margin="10,0,0,0" IsChecked="False"
+                          Content=".basis" Grid.Row="0" Grid.Column="1" />
+                <CheckBox x:Name="FlipDds" Margin="10,0,0,0" IsChecked="False"
+                          Content=".dds" Grid.Row="0" Grid.Column="2" />
+                <CheckBox x:Name="FlipKtx" Margin="10,0,0,0" IsChecked="False"
+                          Content=".ktx" Grid.Row="1" Grid.Column="0" />
+                <CheckBox x:Name="FlipKtx2" Margin="10,0,0,0" IsChecked="False"
+                          Content=".ktx2" Grid.Row="1" Grid.Column="1" />
+                <CheckBox x:Name="FlipPvr" Margin="10,0,0,0" IsChecked="False"
+                          Content=".pvr" Grid.Row="1" Grid.Column="2" />
+            </Grid>
+        </StackPanel>
+
+        <Border BorderBrush="{StaticResource MyBackgroundDisabled}"
+                BorderThickness="0,1,0,0" Width="Auto" Height="1"/>
+        <Grid>
+            <TextBlock x:Uid="PreferenceHDR" Style="{StaticResource BaseTextBlockStyle}" VerticalAlignment="Center" Grid.Column="0" />
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"
+                       x:Uid="PreferenceMaxLuminance" VerticalAlignment="Center"/>
+            <ComboBox Grid.Column="1"
+                      x:Name="MaxLuminance" HorizontalAlignment="Stretch"
+                      SelectionChanged="MaxLuminance_SelectionChanged"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" x:Uid="PreferenceTonemap" VerticalAlignment="Center"/>
+            <ComboBox Grid.Column="1"
+                      x:Name="ToneMap" HorizontalAlignment="Stretch"
+                      SelectionChanged="Tonemap_SelectionChanged"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"
+                       x:Uid="PreferenceExposure" VerticalAlignment="Center"
+                       ToolTipService.ToolTip="Click to Reset"
+                       PointerPressed="ExposureTextBlock_PointerPressed"/>
+            <Slider Grid.Column="1"
+                    x:Name="Exposure"
+                    ValueChanged="Exposure_ValueChanged"
+                    AutomationProperties.Name="Slider with ticks"
+                    Minimum="-2.0"
+                    Maximum="2.0"
+                    Value="0"
+                    SmallChange="0.001"
+                    TickFrequency="0.001"
+                    TickPlacement="None"
+                    SnapsTo="Ticks"
+                    ThumbToolTipValueConverter="{StaticResource FloatValueConverter}"/>
+        </Grid>
+    </StackPanel>
+</Page>

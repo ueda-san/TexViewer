@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "TexViewer (Package)": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": true
+    },
+    "TexViewer (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
