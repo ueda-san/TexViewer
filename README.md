@@ -7,7 +7,8 @@ It also includes basic editing features like cropping and resizing images.
 
 ## Key Features
 
-<img width="193" height="222" alt="main_en" src="https://github.com/user-attachments/assets/aa206436-dbc2-4bb0-a9cf-0c5c06e0bd5f" /><br/>
+<img width="193" height="222" alt="main_en" src="https://github.com/user-attachments/assets/aa206436-dbc2-4bb0-a9cf-0c5c06e0bd5f" />
+<img width="208" height="223" alt="plugin_en" src="https://github.com/user-attachments/assets/9edd50ba-a0a7-41f3-847f-a49368a14777" /><br/>
 * Supports various texture formats such as PVR and ASTC.
 * Supports HDR formats such as AVIF and UltraHDR.
 * It can display colors correctly using color space information from textures or profiles like CICP and ICC.
