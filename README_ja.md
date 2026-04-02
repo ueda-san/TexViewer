@@ -11,6 +11,7 @@
 
 <img width="193" height="222" alt="main_ja" src="https://github.com/user-attachments/assets/981b1f63-e7a8-402b-9d3e-f5788cff466f" />
 <img width="208" height="223" alt="plugin_ja" src="https://github.com/user-attachments/assets/2b3ea6ad-3305-4461-a3b9-6f3d2871e5a7" /><br/>
+
 * PVR や ASTC など各種テクスチャ形式に対応しています。
 * AVIF や UltraHDR など HDR 形式に対応しています。
 * テクスチャの色域情報または CICP や ICC などから正しい色で表示できます。
