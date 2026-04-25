@@ -70,7 +70,7 @@ extern "C" {
     DIRECTXTEXLOADERLIB_API const char *get_version()
     {
         static char buf[32]; //---------+---------+---------+--
-        snprintf(buf, 32,     "2025.10.28.1 (%d)", DIRECTX_TEX_VERSION);
+        snprintf(buf, 32,     "2026.4.1.1 (%d)", DIRECTX_TEX_VERSION);
         return buf;
     }
 
