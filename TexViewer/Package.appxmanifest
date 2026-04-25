@@ -10,7 +10,7 @@
   <Identity
     Name="HideoUeda.TexViewer"
     Publisher="CN=2A6FEBE9-CBA9-47BB-BFD0-5D5977116D4E"
-    Version="1.1.0.0" />
+    Version="1.1.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="cffa0982-7652-4207-8943-77bffeb36509" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
