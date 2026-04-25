@@ -175,12 +175,12 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\..\packages\directxtex_desktop_win10.2025.10.28.1\build\native\directxtex_desktop_win10.targets" Condition="Exists('..\..\packages\directxtex_desktop_win10.2025.10.28.1\build\native\directxtex_desktop_win10.targets')" />
+    <Import Project="..\..\packages\directxtex_desktop_win10.2026.4.1.1\build\native\directxtex_desktop_win10.targets" Condition="Exists('..\..\packages\directxtex_desktop_win10.2026.4.1.1\build\native\directxtex_desktop_win10.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\directxtex_desktop_win10.2025.10.28.1\build\native\directxtex_desktop_win10.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\directxtex_desktop_win10.2025.10.28.1\build\native\directxtex_desktop_win10.targets'))" />
+    <Error Condition="!Exists('..\..\packages\directxtex_desktop_win10.2026.4.1.1\build\native\directxtex_desktop_win10.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\directxtex_desktop_win10.2026.4.1.1\build\native\directxtex_desktop_win10.targets'))" />
   </Target>
 </Project>
