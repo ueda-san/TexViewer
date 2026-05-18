@@ -73,7 +73,7 @@ extern "C" {
     //------------------------------------------------------------------------------
     ASTCLOADERLIB_API const char *get_version()
     {
-        static const char *buf = "5.3.0";
+        static const char *buf = "5.4.0";
         return buf;
     }
 
@@ -130,7 +130,7 @@ extern "C" {
         }
 
         astcenc_context* codec_context;
-        astcenc_error codec_status = astcenc_context_alloc(&config, 1, &codec_context);
+        astcenc_error codec_status = astcenc_context_alloc(&config, 1, &codec_context, nullptr);
         astcenc_swizzle swizzle = astcenc_swizzle{ASTCENC_SWZ_R, ASTCENC_SWZ_G, ASTCENC_SWZ_B, ASTCENC_SWZ_A};
         astcenc_error error = astcenc_decompress_image(codec_context, image_comp.data, image_comp.data_len, img, &swizzle, 0);
         astcenc_decompress_reset(codec_context);
