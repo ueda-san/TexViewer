@@ -1011,7 +1011,6 @@ namespace TexViewer
 
                 string suggestedFilename = Path.GetFileNameWithoutExtension(texImage.FullPath) + ext;
                 savePicker.SuggestedFileName = suggestedFilename;
-                savePicker.FileTypeChoices.Add("All files", ["."]);
 
                 var file = await savePicker.PickSaveFileAsync();
                 if (file != null) {
